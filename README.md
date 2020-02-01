@@ -1,15 +1,17 @@
 # universe_matrix
 
-Wrapper for Multivalue Data
+This package lets developers use BASIC style dynamic arrays within python. This is useful when you're sending data back to universe and are trying to structure it to how it will be used natively.   
+
+Key points here are that indexing starts from 1 and -1 as a position means append, similar to how BASIC handles arrays. 
+
+# Requirements
+
+This package requires the Rocket supplied module u2py as this is just a wrapper around it. 
 
 # Installation
     pip install universe-matrix
     
-# What it does
-
-Syntactically similar to how dynamic arrays are handled in BASIC. 
-
-Indexing starts at 1 just like BASIC and -1 appends. 
+# Examples
 
 	>>> from universe_matrix import UniverseMatrix
   
