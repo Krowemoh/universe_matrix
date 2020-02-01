@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: universe-matrix
+Version: 0.0.1
+Summary: Wrapper for Multivalue Data
+Home-page: https://github.com/Krowemoh/universe_matrix
+Author: Nivethan Thiyagarajah
+Author-email: nivethant@asynchronsystems.com
+License: UNKNOWN
+Description: # universe_matrix
+        Wrapper for Multivalue Data
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
