@@ -1,5 +1,6 @@
 import u2py
 import os
+from multiprocessing import Process, Queue
 
 class UniverseMatrix:
 
@@ -143,12 +144,17 @@ class UniverseMatrix:
 
                 self.d[AM_POS][VM_POS][SVM_POS][TM_POS] = value
 
-
-    def u2(self):
-        old_cwd = os.getcwd()
+    def _forked_u2(self, q):
         os.chdir("/usr/uv")
         data = u2py.DynArray(self._dict_to_array(self.d))
-        os.chdir(old_cwd)
+        q.put(str(data))
+
+    def u2(self):
+        q = Queue()
+        p = Process(target=self._forked_u2,args=(q,))
+        p.start()
+        data = q.get()
+        p.join()
         return data
 
     def _dict_to_array(self,f):

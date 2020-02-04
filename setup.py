@@ -5,7 +5,7 @@ with open("README.md","r") as fh:
 
 setuptools.setup(
         name="universe_matrix",
-        version="0.0.1",
+        version="0.0.3",
         author="Nivethan Thiyagarajah",
         author_email="nivethant@asynchronsystems.com",
         description="Wrapper for Multivalue Data",
